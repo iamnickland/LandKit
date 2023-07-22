@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "LandKit",
             dependencies: [],
-            path: "Source"),
+            path: "Sources"),
         .testTarget(
             name: "LandKitTests",
             dependencies: ["LandKit"]),
