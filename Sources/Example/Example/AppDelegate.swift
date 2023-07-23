@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Example
 //
-//  Created by Nick Land on 2023/7/22.
+//  Created by Nick Land on 2023/7/23.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        LKLog.debug("onDidFinishLaunch")
+        LKLog.debug("onDidLaunch")
         return true
     }
 
