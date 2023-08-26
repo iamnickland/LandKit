@@ -29,6 +29,7 @@ public extension String {
         return URL(string: string)
     }
 }
+
 // MARK: - 布局相关宽高计算
 
 public extension String {
@@ -67,12 +68,12 @@ public extension String {
 
 public extension String {
     // 去掉首尾空格
-    var removeHeadAndTailSpace:String {
+    var removeHeadAndTailSpace: String {
         let whitespace = NSCharacterSet.whitespaces
         return self.trimmingCharacters(in: whitespace)
     }
     // 去掉首尾空格 包括后面的换行 \n
-    var removeHeadAndTailSpacePro:String {
+    var removeHeadAndTailSpacePro: String {
         let whitespace = NSCharacterSet.whitespacesAndNewlines
         return self.trimmingCharacters(in: whitespace)
     }

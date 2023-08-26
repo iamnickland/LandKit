@@ -7,14 +7,14 @@
 
 import Foundation
 
-public struct CKLogLevel: OptionSet {
+public struct LKLogLevel: OptionSet {
     public let rawValue: Int
-    static let none = CKLogLevel([])
-    static let error = CKLogLevel(rawValue: 1) //里面的数字是自己定义的，但不能随意定义
-    static let warning = CKLogLevel(rawValue: 2)
-    static let debug = CKLogLevel(rawValue: 4)
-    static let info = CKLogLevel(rawValue: 8)
-    static let verbose = CKLogLevel(rawValue: 32)
+    static let none = LKLogLevel([])
+    static let error = LKLogLevel(rawValue: 1) //里面的数字是自己定义的，但不能随意定义
+    static let warning = LKLogLevel(rawValue: 2)
+    static let debug = LKLogLevel(rawValue: 4)
+    static let info = LKLogLevel(rawValue: 8)
+    static let verbose = LKLogLevel(rawValue: 32)
     
     public init(rawValue: Int) {
         self.rawValue = rawValue
@@ -40,7 +40,7 @@ class LKLogging: LKLoggingProtocol {
     public init() {
         let cachePath = FileManager.default.urls(for: .cachesDirectory,
                                                  in: .userDomainMask)[0]
-        let logURL = cachePath.appendingPathComponent("log_cyberchat.txt")
+        let logURL = cachePath.appendingPathComponent("log_landkit.txt")
         fileURL = logURL
     }
     
@@ -145,7 +145,7 @@ public class LKLog {
     
     public static let shared = LKLog()
     /// 打印日志的等级,默认只打印高级别日志
-    public var logLevel: CKLogLevel = [.error, .warning, .debug]
+    public var logLevel: LKLogLevel = [.error, .warning, .debug]
     
     // MARK: - Private
     
