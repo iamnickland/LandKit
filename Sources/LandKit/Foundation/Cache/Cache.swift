@@ -9,7 +9,7 @@ import Foundation
 
 public protocol Cache {
     func cache(_ key: String, data: Data)
-    func retrieve(_ key: String) -> Data?
+    func find(_ key: String) -> Data?
     func clear(_ key: String)
     func clear()
 }
@@ -51,7 +51,7 @@ public extension CodableCache {
     }
     
     func retrieve<T:Decodable>(_ key: String) -> T? {
-        if let data = retrieve(key) {
+        if let data = find(key) {
             return try? decoder.decode(T.self, from: data)
         }
         return nil
@@ -110,10 +110,10 @@ public final class PersistingCache: Cache {
         memoryCache.cache(key, data: data)
     }
     
-    public func retrieve(_ key: String) -> Data? {
-        if let item = memoryCache.retrieve(key) {
+    public func find(_ key: String) -> Data? {
+        if let item = memoryCache.find(key) {
             return item
-        } else if let item = fileCache.retrieve(key) {
+        } else if let item = fileCache.find(key) {
             memoryCache.cache(key, data: item)
             return item
         } else {
@@ -152,7 +152,7 @@ public final class FileCache: Cache {
         }
     }
     
-    public func retrieve(_ key: String) -> Data? {
+    public func find(_ key: String) -> Data? {
         do {
             let file = URL(fileURLWithPath: "\(key).cache", relativeTo: baseURL)
             return try Data(contentsOf: file)
@@ -191,7 +191,7 @@ public final class MemoryCache: Cache {
         _cache.setObject(data as NSData, forKey: key as NSString)
     }
     
-    public func retrieve(_ key: String) -> Data? {
+    public func find(_ key: String) -> Data? {
         _cache.object(forKey: key as NSString) as Data?
     }
     public func clear(_ key: String) {
