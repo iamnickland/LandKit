@@ -21,7 +21,7 @@ public extension NSAttributedString {
 }
 
 /// 构建
-extension NSAttributedString {
+public extension NSAttributedString {
     
     /// 通过字符串构建富文本
     /// - Parameters:
