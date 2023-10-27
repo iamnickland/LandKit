@@ -233,18 +233,19 @@ public extension String {
     ///   - font: 字体
     ///   - foregroundColor: 字体颜色
     ///   - backgroundColr: 背景色
+    ///   - style: 样式
     /// - Returns: 转换处理后的富文本字符串
-    func attributedString(font: UIFont, foregroundColor: UIColor, backgroundColr: UIColor? = nil) -> NSAttributedString {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .left
-        paragraphStyle.firstLineHeadIndent = 0.0
+    func attributedString(font: UIFont, foregroundColor: UIColor, backgroundColr: UIColor? = nil, style: NSParagraphStyle? = nil) -> NSAttributedString {
+        
         var attributes: [NSAttributedString.Key: Any] = [
             .font: font,
             .foregroundColor: foregroundColor,
-            .paragraphStyle: paragraphStyle
         ]
         if let backgroundColr = backgroundColr {
             attributes[.backgroundColor] = backgroundColr
+        }
+        if let paragraphStyle = style {
+            attributes[.paragraphStyle] = paragraphStyle
         }
         let attributedString = NSAttributedString(string: self, attributes: attributes)
         return attributedString

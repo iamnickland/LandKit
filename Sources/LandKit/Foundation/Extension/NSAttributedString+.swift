@@ -28,17 +28,16 @@ public extension NSAttributedString {
     ///   - string: 字符串
     ///   - font: 字体
     ///   - foregroundColor: 字体颜色
+    ///   - style: 样式
     /// - Returns: 富文本
-    class func create(_ string: String, font: UIFont, foregroundColor: UIColor, backgroundColr: UIColor? = nil) -> NSAttributedString {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .left
-        paragraphStyle.firstLineHeadIndent = 0.0
-        
+    class func create(_ string: String, font: UIFont, foregroundColor: UIColor, backgroundColr: UIColor? = nil, style: NSParagraphStyle? = nil) -> NSAttributedString {
         var attributes: [NSAttributedString.Key: Any] = [.font: font,
-                                                         .foregroundColor: foregroundColor,
-                                                         .paragraphStyle: paragraphStyle]
+                                                         .foregroundColor: foregroundColor]
         if let backgroundColr = backgroundColr {
             attributes[.backgroundColor] = backgroundColr
+        }
+        if let paragraphStyle = style {
+            attributes[.paragraphStyle] = style
         }
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         return attributedString
