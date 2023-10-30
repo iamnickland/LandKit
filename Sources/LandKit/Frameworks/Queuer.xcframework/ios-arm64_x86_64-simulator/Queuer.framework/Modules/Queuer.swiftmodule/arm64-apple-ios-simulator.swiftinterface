@@ -1,0 +1,139 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios8.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Queuer
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Dispatch
+import Foundation
+@_exported import Queuer
+import Swift
+import _Concurrency
+import _StringProcessing
+@objc open class ConcurrentOperation : Foundation.Operation {
+  public var executionBlock: ((_ operation: Queuer.ConcurrentOperation) -> Swift.Void)?
+  @objc override dynamic open var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic open var isExecuting: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic open var isFinished: Swift.Bool {
+    @objc get
+  }
+  open var progress: Swift.Int {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "success")
+  open var hasFailed: Swift.Bool {
+    get
+  }
+  open var success: Swift.Bool
+  open var maximumRetries: Swift.Int
+  open var currentAttempt: Swift.Int {
+    get
+  }
+  open var manualRetry: Swift.Bool
+  public init(name: Swift.String? = nil, executionBlock: ((_ operation: Queuer.ConcurrentOperation) -> Swift.Void)? = nil)
+  @objc override dynamic open func start()
+  open func retry()
+  open func execute()
+  @available(*, deprecated, renamed: "finish(success:)")
+  open func finish(_ hasFailed: Swift.Bool)
+  open func finish(success: Swift.Bool = true)
+  open func pause()
+  open func resume()
+  @objc deinit
+}
+extension Queuer.ConcurrentOperation {
+  public func addToSharedQueuer()
+  public func addToQueue(_ queue: Queuer.Queuer)
+}
+@objc @_inheritsConvenienceInitializers public class SynchronousOperation : Queuer.ConcurrentOperation {
+  @objc override dynamic public var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  override public func finish(success: Swift.Bool = true)
+  @objc override dynamic public func cancel()
+  override public func execute()
+  override public init(name: Swift.String? = nil, executionBlock: ((_ operation: Queuer.ConcurrentOperation) -> Swift.Void)? = nil)
+  @objc deinit
+}
+public class Queuer {
+  public static let shared: Queuer.Queuer
+  final public let queue: Foundation.OperationQueue
+  public var operationCount: Swift.Int {
+    get
+  }
+  public var operations: [Foundation.Operation] {
+    get
+  }
+  public var qualityOfService: Foundation.QualityOfService {
+    get
+    set
+  }
+  public var isExecuting: Swift.Bool {
+    get
+  }
+  public var maxConcurrentOperationCount: Swift.Int {
+    get
+    set
+  }
+  public init(name: Swift.String, maxConcurrentOperationCount: Swift.Int = Int.max, qualityOfService: Foundation.QualityOfService = .default)
+  public func cancelAll()
+  public func pause()
+  public func resume()
+  public func waitUntilAllOperationsAreFinished()
+  @objc deinit
+}
+extension Queuer.Queuer {
+  public func addOperation(_ operation: @escaping () -> Swift.Void)
+  public func addOperation(_ operation: Foundation.Operation)
+  public func addChainedOperations(_ operations: [Foundation.Operation], completionHandler: (() -> Swift.Void)? = nil)
+  public func addChainedOperations(_ operations: Foundation.Operation..., completionHandler: (() -> Swift.Void)? = nil)
+  public func addCompletionHandler(_ completionHandler: @escaping () -> Swift.Void)
+}
+extension Queuer.Queuer {
+  public typealias QueueStateList = [Queuer.OperationState]
+  public func state() -> Queuer.Queuer.QueueStateList
+  public static func state(of queue: Foundation.OperationQueue) -> Queuer.Queuer.QueueStateList
+}
+public struct Scheduler {
+  public var timer: Dispatch.DispatchSourceTimer {
+    get
+  }
+  public var deadline: Dispatch.DispatchTime {
+    get
+  }
+  public var repeating: Dispatch.DispatchTimeInterval {
+    get
+  }
+  public var qualityOfService: Dispatch.DispatchQoS {
+    get
+  }
+  public var handler: (() -> Swift.Void)? {
+    get
+  }
+  public init(deadline: Dispatch.DispatchTime, repeating: Dispatch.DispatchTimeInterval, qualityOfService: Dispatch.DispatchQoS = .default, handler: (() -> Swift.Void)? = nil)
+  public mutating func setHandler(_ handler: @escaping () -> Swift.Void)
+}
+public struct Semaphore {
+  public init(poolSize: Swift.Int = 0)
+  @discardableResult
+  public func wait(_ timeout: Dispatch.DispatchTime = .distantFuture) -> Dispatch.DispatchTimeoutResult
+  @discardableResult
+  public func `continue`() -> Swift.Int
+}
+public class OperationState : Swift.Codable {
+  public var name: Swift.String
+  public var progress: Swift.Int
+  public var dependencies: [Swift.String]
+  public init(name: Swift.String, progress: Swift.Int, dependencies: [Swift.String])
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Queuer.OperationState : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}

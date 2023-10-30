@@ -1,0 +1,3425 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConcurrentOperation",
+        "printedName": "ConcurrentOperation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "executionBlock",
+            "printedName": "executionBlock",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Queuer.ConcurrentOperation) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Queuer.ConcurrentOperation) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConcurrentOperation",
+                        "printedName": "Queuer.ConcurrentOperation",
+                        "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC14executionBlockyACcSgvp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC14executionBlockyACcSgvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Queuer.ConcurrentOperation) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Queuer.ConcurrentOperation) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConcurrentOperation",
+                            "printedName": "Queuer.ConcurrentOperation",
+                            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14executionBlockyACcSgvg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14executionBlockyACcSgvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Queuer.ConcurrentOperation) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Queuer.ConcurrentOperation) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConcurrentOperation",
+                            "printedName": "Queuer.ConcurrentOperation",
+                            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14executionBlockyACcSgvs",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14executionBlockyACcSgvs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14executionBlockyACcSgvM",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14executionBlockyACcSgvM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isAsynchronous",
+            "printedName": "isAsynchronous",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(py)asynchronous",
+            "mangledName": "$s6Queuer19ConcurrentOperationC14isAsynchronousSbvp",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "asynchronous",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(im)isAsynchronous",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14isAsynchronousSbvg",
+                "moduleName": "Queuer",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "isAsynchronous",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isExecuting",
+            "printedName": "isExecuting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(py)executing",
+            "mangledName": "$s6Queuer19ConcurrentOperationC11isExecutingSbvp",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "executing",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(im)isExecuting",
+                "mangledName": "$s6Queuer19ConcurrentOperationC11isExecutingSbvg",
+                "moduleName": "Queuer",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "isExecuting",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isFinished",
+            "printedName": "isFinished",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(py)finished",
+            "mangledName": "$s6Queuer19ConcurrentOperationC10isFinishedSbvp",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "finished",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(im)isFinished",
+                "mangledName": "$s6Queuer19ConcurrentOperationC10isFinishedSbvg",
+                "moduleName": "Queuer",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "isFinished",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "progress",
+            "printedName": "progress",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC8progressSivp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC8progressSivp",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC8progressSivg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC8progressSivg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC8progressSivs",
+                "mangledName": "$s6Queuer19ConcurrentOperationC8progressSivs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC8progressSivM",
+                "mangledName": "$s6Queuer19ConcurrentOperationC8progressSivM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasFailed",
+            "printedName": "hasFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC9hasFailedSbvp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC9hasFailedSbvp",
+            "moduleName": "Queuer",
+            "deprecated": true,
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC9hasFailedSbvg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC9hasFailedSbvg",
+                "moduleName": "Queuer",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC7successSbvp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC7successSbvp",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC7successSbvg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC7successSbvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC7successSbvs",
+                "mangledName": "$s6Queuer19ConcurrentOperationC7successSbvs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC7successSbvM",
+                "mangledName": "$s6Queuer19ConcurrentOperationC7successSbvM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maximumRetries",
+            "printedName": "maximumRetries",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC14maximumRetriesSivp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC14maximumRetriesSivp",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14maximumRetriesSivg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14maximumRetriesSivg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14maximumRetriesSivs",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14maximumRetriesSivs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14maximumRetriesSivM",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14maximumRetriesSivM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentAttempt",
+            "printedName": "currentAttempt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC14currentAttemptSivp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC14currentAttemptSivp",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC14currentAttemptSivg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC14currentAttemptSivg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "manualRetry",
+            "printedName": "manualRetry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer19ConcurrentOperationC11manualRetrySbvp",
+            "mangledName": "$s6Queuer19ConcurrentOperationC11manualRetrySbvp",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC11manualRetrySbvg",
+                "mangledName": "$s6Queuer19ConcurrentOperationC11manualRetrySbvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC11manualRetrySbvs",
+                "mangledName": "$s6Queuer19ConcurrentOperationC11manualRetrySbvs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer19ConcurrentOperationC11manualRetrySbvM",
+                "mangledName": "$s6Queuer19ConcurrentOperationC11manualRetrySbvM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:executionBlock:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConcurrentOperation",
+                "printedName": "Queuer.ConcurrentOperation",
+                "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Queuer.ConcurrentOperation) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Queuer.ConcurrentOperation) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConcurrentOperation",
+                        "printedName": "Queuer.ConcurrentOperation",
+                        "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Queuer19ConcurrentOperationC4name14executionBlockACSSSg_yACcSgtcfc",
+            "mangledName": "$s6Queuer19ConcurrentOperationC4name14executionBlockACSSSg_yACcSgtcfc",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(im)start",
+            "mangledName": "$s6Queuer19ConcurrentOperationC5startyyF",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "start",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "retry",
+            "printedName": "retry()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC5retryyyF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC5retryyyF",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC7executeyyF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC7executeyyF",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC6finishyySbF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC6finishyySbF",
+            "moduleName": "Queuer",
+            "deprecated": true,
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish(success:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC6finish7successySb_tF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC6finish7successySb_tF",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC5pauseyyF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC5pauseyyF",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resume",
+            "printedName": "resume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC6resumeyyF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC6resumeyyF",
+            "moduleName": "Queuer",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConcurrentOperation",
+                "printedName": "Queuer.ConcurrentOperation",
+                "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation(im)init",
+            "mangledName": "$s6Queuer19ConcurrentOperationCACycfc",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "addToSharedQueuer",
+            "printedName": "addToSharedQueuer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC011addToSharedA0yyF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC011addToSharedA0yyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addToQueue",
+            "printedName": "addToQueue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Queuer",
+                "printedName": "Queuer.Queuer",
+                "usr": "s:6QueuerAAC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer19ConcurrentOperationC10addToQueueyyA2ACF",
+            "mangledName": "$s6Queuer19ConcurrentOperationC10addToQueueyyA2ACF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation",
+        "mangledName": "$s6Queuer19ConcurrentOperationC",
+        "moduleName": "Queuer",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSOperation",
+        "superclassNames": [
+          "Foundation.Operation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SynchronousOperation",
+        "printedName": "SynchronousOperation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isAsynchronous",
+            "printedName": "isAsynchronous",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Queuer@objc(cs)SynchronousOperation(py)asynchronous",
+            "mangledName": "$s6Queuer20SynchronousOperationC14isAsynchronousSbvp",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "objc_name": "asynchronous",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Queuer@objc(cs)SynchronousOperation(im)isAsynchronous",
+                "mangledName": "$s6Queuer20SynchronousOperationC14isAsynchronousSbvg",
+                "moduleName": "Queuer",
+                "overriding": true,
+                "objc_name": "isAsynchronous",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish(success:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer20SynchronousOperationC6finish7successySb_tF",
+            "mangledName": "$s6Queuer20SynchronousOperationC6finish7successySb_tF",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "declAttributes": [
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cancel",
+            "printedName": "cancel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Queuer@objc(cs)SynchronousOperation(im)cancel",
+            "mangledName": "$s6Queuer20SynchronousOperationC6cancelyyF",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "objc_name": "cancel",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer20SynchronousOperationC7executeyyF",
+            "mangledName": "$s6Queuer20SynchronousOperationC7executeyyF",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "declAttributes": [
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:executionBlock:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SynchronousOperation",
+                "printedName": "Queuer.SynchronousOperation",
+                "usr": "c:@M@Queuer@objc(cs)SynchronousOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Queuer.ConcurrentOperation) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Queuer.ConcurrentOperation) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConcurrentOperation",
+                        "printedName": "Queuer.ConcurrentOperation",
+                        "usr": "c:@M@Queuer@objc(cs)ConcurrentOperation"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Queuer20SynchronousOperationC4name14executionBlockACSSSg_yAA010ConcurrentC0CcSgtcfc",
+            "mangledName": "$s6Queuer20SynchronousOperationC4name14executionBlockACSSSg_yAA010ConcurrentC0CcSgtcfc",
+            "moduleName": "Queuer",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Queuer@objc(cs)SynchronousOperation",
+        "mangledName": "$s6Queuer20SynchronousOperationC",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@Queuer@objc(cs)ConcurrentOperation",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Queuer.ConcurrentOperation",
+          "Foundation.Operation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Queuer",
+        "printedName": "Queuer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Queuer",
+                "printedName": "Queuer.Queuer",
+                "usr": "s:6QueuerAAC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC6sharedABvpZ",
+            "mangledName": "$s6QueuerAAC6sharedABvpZ",
+            "moduleName": "Queuer",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Queuer",
+                    "printedName": "Queuer.Queuer",
+                    "usr": "s:6QueuerAAC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC6sharedABvgZ",
+                "mangledName": "$s6QueuerAAC6sharedABvgZ",
+                "moduleName": "Queuer",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "queue",
+            "printedName": "queue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationQueue",
+                "printedName": "Foundation.OperationQueue",
+                "usr": "c:objc(cs)NSOperationQueue"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC5queueSo16NSOperationQueueCvp",
+            "mangledName": "$s6QueuerAAC5queueSo16NSOperationQueueCvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationQueue",
+                    "printedName": "Foundation.OperationQueue",
+                    "usr": "c:objc(cs)NSOperationQueue"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC5queueSo16NSOperationQueueCvg",
+                "mangledName": "$s6QueuerAAC5queueSo16NSOperationQueueCvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "operationCount",
+            "printedName": "operationCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC14operationCountSivp",
+            "mangledName": "$s6QueuerAAC14operationCountSivp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC14operationCountSivg",
+                "mangledName": "$s6QueuerAAC14operationCountSivg",
+                "moduleName": "Queuer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "operations",
+            "printedName": "operations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.Operation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Operation",
+                    "printedName": "Foundation.Operation",
+                    "usr": "c:objc(cs)NSOperation"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC10operationsSaySo11NSOperationCGvp",
+            "mangledName": "$s6QueuerAAC10operationsSaySo11NSOperationCGvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC10operationsSaySo11NSOperationCGvg",
+                "mangledName": "$s6QueuerAAC10operationsSaySo11NSOperationCGvg",
+                "moduleName": "Queuer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "qualityOfService",
+            "printedName": "qualityOfService",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QualityOfService",
+                "printedName": "Foundation.QualityOfService",
+                "usr": "c:@E@NSQualityOfService"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC16qualityOfServiceSo09NSQualitycD0Vvp",
+            "mangledName": "$s6QueuerAAC16qualityOfServiceSo09NSQualitycD0Vvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QualityOfService",
+                    "printedName": "Foundation.QualityOfService",
+                    "usr": "c:@E@NSQualityOfService"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC16qualityOfServiceSo09NSQualitycD0Vvg",
+                "mangledName": "$s6QueuerAAC16qualityOfServiceSo09NSQualitycD0Vvg",
+                "moduleName": "Queuer",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QualityOfService",
+                    "printedName": "Foundation.QualityOfService",
+                    "usr": "c:@E@NSQualityOfService"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC16qualityOfServiceSo09NSQualitycD0Vvs",
+                "mangledName": "$s6QueuerAAC16qualityOfServiceSo09NSQualitycD0Vvs",
+                "moduleName": "Queuer",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC16qualityOfServiceSo09NSQualitycD0VvM",
+                "mangledName": "$s6QueuerAAC16qualityOfServiceSo09NSQualitycD0VvM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isExecuting",
+            "printedName": "isExecuting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC11isExecutingSbvp",
+            "mangledName": "$s6QueuerAAC11isExecutingSbvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC11isExecutingSbvg",
+                "mangledName": "$s6QueuerAAC11isExecutingSbvg",
+                "moduleName": "Queuer",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxConcurrentOperationCount",
+            "printedName": "maxConcurrentOperationCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6QueuerAAC27maxConcurrentOperationCountSivp",
+            "mangledName": "$s6QueuerAAC27maxConcurrentOperationCountSivp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC27maxConcurrentOperationCountSivg",
+                "mangledName": "$s6QueuerAAC27maxConcurrentOperationCountSivg",
+                "moduleName": "Queuer",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC27maxConcurrentOperationCountSivs",
+                "mangledName": "$s6QueuerAAC27maxConcurrentOperationCountSivs",
+                "moduleName": "Queuer",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6QueuerAAC27maxConcurrentOperationCountSivM",
+                "mangledName": "$s6QueuerAAC27maxConcurrentOperationCountSivM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:maxConcurrentOperationCount:qualityOfService:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Queuer",
+                "printedName": "Queuer.Queuer",
+                "usr": "s:6QueuerAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "QualityOfService",
+                "printedName": "Foundation.QualityOfService",
+                "hasDefaultArg": true,
+                "usr": "c:@E@NSQualityOfService"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6QueuerAAC4name27maxConcurrentOperationCount16qualityOfServiceABSS_SiSo09NSQualityhI0Vtcfc",
+            "mangledName": "$s6QueuerAAC4name27maxConcurrentOperationCount16qualityOfServiceABSS_SiSo09NSQualityhI0Vtcfc",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "cancelAll",
+            "printedName": "cancelAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC9cancelAllyyF",
+            "mangledName": "$s6QueuerAAC9cancelAllyyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC5pauseyyF",
+            "mangledName": "$s6QueuerAAC5pauseyyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resume",
+            "printedName": "resume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC6resumeyyF",
+            "mangledName": "$s6QueuerAAC6resumeyyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "waitUntilAllOperationsAreFinished",
+            "printedName": "waitUntilAllOperationsAreFinished()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC33waitUntilAllOperationsAreFinishedyyF",
+            "mangledName": "$s6QueuerAAC33waitUntilAllOperationsAreFinishedyyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addOperation",
+            "printedName": "addOperation(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC12addOperationyyyycF",
+            "mangledName": "$s6QueuerAAC12addOperationyyyycF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addOperation",
+            "printedName": "addOperation(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Operation",
+                "printedName": "Foundation.Operation",
+                "usr": "c:objc(cs)NSOperation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC12addOperationyySo11NSOperationCF",
+            "mangledName": "$s6QueuerAAC12addOperationyySo11NSOperationCF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addChainedOperations",
+            "printedName": "addChainedOperations(_:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.Operation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Operation",
+                    "printedName": "Foundation.Operation",
+                    "usr": "c:objc(cs)NSOperation"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC20addChainedOperations_17completionHandlerySaySo11NSOperationCG_yycSgtF",
+            "mangledName": "$s6QueuerAAC20addChainedOperations_17completionHandlerySaySo11NSOperationCG_yycSgtF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addChainedOperations",
+            "printedName": "addChainedOperations(_:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.Operation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Operation",
+                    "printedName": "Foundation.Operation",
+                    "usr": "c:objc(cs)NSOperation"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC20addChainedOperations_17completionHandlerySo11NSOperationCd_yycSgtF",
+            "mangledName": "$s6QueuerAAC20addChainedOperations_17completionHandlerySo11NSOperationCd_yycSgtF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addCompletionHandler",
+            "printedName": "addCompletionHandler(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC20addCompletionHandleryyyycF",
+            "mangledName": "$s6QueuerAAC20addCompletionHandleryyyycF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "state",
+            "printedName": "state()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Queuer.OperationState]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationState",
+                    "printedName": "Queuer.OperationState",
+                    "usr": "s:6Queuer14OperationStateC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC5stateSayAA14OperationStateCGyF",
+            "mangledName": "$s6QueuerAAC5stateSayAA14OperationStateCGyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "state",
+            "printedName": "state(of:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Queuer.OperationState]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationState",
+                    "printedName": "Queuer.OperationState",
+                    "usr": "s:6Queuer14OperationStateC"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OperationQueue",
+                "printedName": "Foundation.OperationQueue",
+                "usr": "c:objc(cs)NSOperationQueue"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6QueuerAAC5state2ofSayAA14OperationStateCGSo16NSOperationQueueC_tFZ",
+            "mangledName": "$s6QueuerAAC5state2ofSayAA14OperationStateCGSo16NSOperationQueueC_tFZ",
+            "moduleName": "Queuer",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6QueuerAAC",
+        "mangledName": "$s6QueuerAAC",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Dispatch",
+        "printedName": "Dispatch",
+        "declKind": "Import",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Queuer"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Scheduler",
+        "printedName": "Scheduler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "timer",
+            "printedName": "timer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchSourceTimer",
+                "printedName": "Dispatch.DispatchSourceTimer",
+                "usr": "c:objc(pl)OS_dispatch_source_timer"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer9SchedulerV5timerSo019OS_dispatch_source_C0_pvp",
+            "mangledName": "$s6Queuer9SchedulerV5timerSo019OS_dispatch_source_C0_pvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchSourceTimer",
+                    "printedName": "Dispatch.DispatchSourceTimer",
+                    "usr": "c:objc(pl)OS_dispatch_source_timer"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer9SchedulerV5timerSo019OS_dispatch_source_C0_pvg",
+                "mangledName": "$s6Queuer9SchedulerV5timerSo019OS_dispatch_source_C0_pvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deadline",
+            "printedName": "deadline",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchTime",
+                "printedName": "Dispatch.DispatchTime",
+                "usr": "s:8Dispatch0A4TimeV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer9SchedulerV8deadline8Dispatch0D4TimeVvp",
+            "mangledName": "$s6Queuer9SchedulerV8deadline8Dispatch0D4TimeVvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchTime",
+                    "printedName": "Dispatch.DispatchTime",
+                    "usr": "s:8Dispatch0A4TimeV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer9SchedulerV8deadline8Dispatch0D4TimeVvg",
+                "mangledName": "$s6Queuer9SchedulerV8deadline8Dispatch0D4TimeVvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "repeating",
+            "printedName": "repeating",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchTimeInterval",
+                "printedName": "Dispatch.DispatchTimeInterval",
+                "usr": "s:8Dispatch0A12TimeIntervalO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer9SchedulerV9repeating8Dispatch0D12TimeIntervalOvp",
+            "mangledName": "$s6Queuer9SchedulerV9repeating8Dispatch0D12TimeIntervalOvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchTimeInterval",
+                    "printedName": "Dispatch.DispatchTimeInterval",
+                    "usr": "s:8Dispatch0A12TimeIntervalO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer9SchedulerV9repeating8Dispatch0D12TimeIntervalOvg",
+                "mangledName": "$s6Queuer9SchedulerV9repeating8Dispatch0D12TimeIntervalOvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "qualityOfService",
+            "printedName": "qualityOfService",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQoS",
+                "printedName": "Dispatch.DispatchQoS",
+                "usr": "s:8Dispatch0A3QoSV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer9SchedulerV16qualityOfService8Dispatch0F3QoSVvp",
+            "mangledName": "$s6Queuer9SchedulerV16qualityOfService8Dispatch0F3QoSVvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQoS",
+                    "printedName": "Dispatch.DispatchQoS",
+                    "usr": "s:8Dispatch0A3QoSV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer9SchedulerV16qualityOfService8Dispatch0F3QoSVvg",
+                "mangledName": "$s6Queuer9SchedulerV16qualityOfService8Dispatch0F3QoSVvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "handler",
+            "printedName": "handler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer9SchedulerV7handleryycSgvp",
+            "mangledName": "$s6Queuer9SchedulerV7handleryycSgvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer9SchedulerV7handleryycSgvg",
+                "mangledName": "$s6Queuer9SchedulerV7handleryycSgvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(deadline:repeating:qualityOfService:handler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Scheduler",
+                "printedName": "Queuer.Scheduler",
+                "usr": "s:6Queuer9SchedulerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchTime",
+                "printedName": "Dispatch.DispatchTime",
+                "usr": "s:8Dispatch0A4TimeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchTimeInterval",
+                "printedName": "Dispatch.DispatchTimeInterval",
+                "usr": "s:8Dispatch0A12TimeIntervalO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQoS",
+                "printedName": "Dispatch.DispatchQoS",
+                "hasDefaultArg": true,
+                "usr": "s:8Dispatch0A3QoSV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Queuer9SchedulerV8deadline9repeating16qualityOfService7handlerAC8Dispatch0I4TimeV_AH0iJ8IntervalOAH0I3QoSVyycSgtcfc",
+            "mangledName": "$s6Queuer9SchedulerV8deadline9repeating16qualityOfService7handlerAC8Dispatch0I4TimeV_AH0iJ8IntervalOAH0I3QoSVyycSgtcfc",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setHandler",
+            "printedName": "setHandler(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer9SchedulerV10setHandleryyyycF",
+            "mangledName": "$s6Queuer9SchedulerV10setHandleryyyycF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Queuer9SchedulerV",
+        "mangledName": "$s6Queuer9SchedulerV",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Dispatch",
+        "printedName": "Dispatch",
+        "declKind": "Import",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Queuer"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Semaphore",
+        "printedName": "Semaphore",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(poolSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Semaphore",
+                "printedName": "Queuer.Semaphore",
+                "usr": "s:6Queuer9SemaphoreV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Queuer9SemaphoreV8poolSizeACSi_tcfc",
+            "mangledName": "$s6Queuer9SemaphoreV8poolSizeACSi_tcfc",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "wait",
+            "printedName": "wait(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchTimeoutResult",
+                "printedName": "Dispatch.DispatchTimeoutResult",
+                "usr": "s:8Dispatch0A13TimeoutResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchTime",
+                "printedName": "Dispatch.DispatchTime",
+                "hasDefaultArg": true,
+                "usr": "s:8Dispatch0A4TimeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer9SemaphoreV4waity8Dispatch0D13TimeoutResultOAE0D4TimeVF",
+            "mangledName": "$s6Queuer9SemaphoreV4waity8Dispatch0D13TimeoutResultOAE0D4TimeVF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "continue",
+            "printedName": "continue()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer9SemaphoreV8continueSiyF",
+            "mangledName": "$s6Queuer9SemaphoreV8continueSiyF",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Queuer9SemaphoreV",
+        "mangledName": "$s6Queuer9SemaphoreV",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OperationState",
+        "printedName": "OperationState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer14OperationStateC4nameSSvp",
+            "mangledName": "$s6Queuer14OperationStateC4nameSSvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC4nameSSvg",
+                "mangledName": "$s6Queuer14OperationStateC4nameSSvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC4nameSSvs",
+                "mangledName": "$s6Queuer14OperationStateC4nameSSvs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC4nameSSvM",
+                "mangledName": "$s6Queuer14OperationStateC4nameSSvM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "progress",
+            "printedName": "progress",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer14OperationStateC8progressSivp",
+            "mangledName": "$s6Queuer14OperationStateC8progressSivp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC8progressSivg",
+                "mangledName": "$s6Queuer14OperationStateC8progressSivg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC8progressSivs",
+                "mangledName": "$s6Queuer14OperationStateC8progressSivs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC8progressSivM",
+                "mangledName": "$s6Queuer14OperationStateC8progressSivM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dependencies",
+            "printedName": "dependencies",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer14OperationStateC12dependenciesSaySSGvp",
+            "mangledName": "$s6Queuer14OperationStateC12dependenciesSaySSGvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC12dependenciesSaySSGvg",
+                "mangledName": "$s6Queuer14OperationStateC12dependenciesSaySSGvg",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC12dependenciesSaySSGvs",
+                "mangledName": "$s6Queuer14OperationStateC12dependenciesSaySSGvs",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC12dependenciesSaySSGvM",
+                "mangledName": "$s6Queuer14OperationStateC12dependenciesSaySSGvM",
+                "moduleName": "Queuer",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:progress:dependencies:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationState",
+                "printedName": "Queuer.OperationState",
+                "usr": "s:6Queuer14OperationStateC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Queuer14OperationStateC4name8progress12dependenciesACSS_SiSaySSGtcfc",
+            "mangledName": "$s6Queuer14OperationStateC4name8progress12dependenciesACSS_SiSaySSGtcfc",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationState",
+                "printedName": "Queuer.OperationState",
+                "usr": "s:6Queuer14OperationStateC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Queuer14OperationStateC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6Queuer14OperationStateC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Queuer",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Queuer14OperationStateC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6Queuer14OperationStateC6encode2toys7Encoder_p_tKF",
+            "moduleName": "Queuer",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Queuer14OperationStateC11descriptionSSvp",
+            "mangledName": "$s6Queuer14OperationStateC11descriptionSSvp",
+            "moduleName": "Queuer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Queuer14OperationStateC11descriptionSSvg",
+                "mangledName": "$s6Queuer14OperationStateC11descriptionSSvg",
+                "moduleName": "Queuer",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Queuer14OperationStateC",
+        "mangledName": "$s6Queuer14OperationStateC",
+        "moduleName": "Queuer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1856,
+      "length": 13,
+      "value": "\"isExecuting\""
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1717,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 2226,
+      "length": 12,
+      "value": "\"isFinished\""
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2088,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2601,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2619,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2634,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2639,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2546,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3172,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3276,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3357,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3547,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3650,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5483,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/ConcurrentOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1368,
+      "length": 19,
+      "value": "\"Queuer.ConcurrentOperation\""
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/SynchronousOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1968,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/Queuer.swift",
+      "kind": "StringLiteral",
+      "offset": 1318,
+      "length": 8,
+      "value": "\"Queuer\""
+    },
+    {
+      "filePath": "\/Users\/liunian\/Downloads\/Queuer-2.1.1 2\/Sources\/Queuer\/Semaphore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1921,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}
