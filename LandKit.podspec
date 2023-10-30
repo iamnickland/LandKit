@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "13.0"
 
   s.source       = { :git => "https://github.com/iamnickland/LandKit.git", :tag => s.version }
-  s.source_files = ['Sources/LandKit/**/*.{swift, xcframework}']
+  s.source_files = ['Sources/LandKit/**/*.swift']
   s.requires_arc = true
   s.frameworks = "CFNetwork", "Accelerate"
   s.vendored_frameworks = "Queuer.xcframework"

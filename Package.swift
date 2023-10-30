@@ -19,7 +19,7 @@ let package = Package(
         .testTarget(
             name: "LandKitTests",
             dependencies: ["LandKit"]),
-        .binaryTarget(name: "Queuer", path: "./Sources/LandKit/Frameworks/Queuer.xcframework")
+        .binaryTarget(name: "Queuer", path: "Queuer.xcframework")
     ],
     swiftLanguageVersions: [
         SwiftVersion.v5,
