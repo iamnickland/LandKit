@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.source_files = ['Sources/LandKit/**/*.swift']
   s.requires_arc = true
   s.frameworks = "CFNetwork", "Accelerate"
-  s.vendored_frameworks = "Queuer.xcframework"
+  s.ios.vendored_frameworks = "Queuer.xcframework"
 end
