@@ -9,12 +9,12 @@ import Foundation
 
 public struct LKLogLevel: OptionSet {
     public let rawValue: Int
-    static let none = LKLogLevel([])
-    static let error = LKLogLevel(rawValue: 1) //里面的数字是自己定义的，但不能随意定义
-    static let warning = LKLogLevel(rawValue: 2)
-    static let debug = LKLogLevel(rawValue: 4)
-    static let info = LKLogLevel(rawValue: 8)
-    static let verbose = LKLogLevel(rawValue: 32)
+    public static let none = LKLogLevel([])
+    public static let error = LKLogLevel(rawValue: 1)
+    public static let warning = LKLogLevel(rawValue: 2)
+    public static let debug = LKLogLevel(rawValue: 4)
+    public static let info = LKLogLevel(rawValue: 8)
+    public static let verbose = LKLogLevel(rawValue: 32)
     
     public init(rawValue: Int) {
         self.rawValue = rawValue
@@ -33,9 +33,8 @@ public protocol LKLoggingProtocol {
 }
 
 class LKLogging: LKLoggingProtocol {
-    
     private let fileURL: URL
-    private let fileLock: NSLock = NSLock()
+    private let fileLock: NSLock = .init()
     
     public init() {
         let cachePath = FileManager.default.urls(for: .cachesDirectory,
@@ -49,6 +48,7 @@ class LKLogging: LKLoggingProtocol {
     }
     
     // MARK: - CKLoggingProtocol
+
     public var logFileURL: URL? {
         return fileURL
     }
@@ -107,8 +107,8 @@ class LKLogging: LKLoggingProtocol {
     }
     
     // MARK: 在文件末尾追加新内容
+
     func appendText(fileURL: URL, string: String) {
-        return
         // 如果文件不存在则新建一个
 //        if !FileManager.default.fileExists(atPath: fileURL.path) {
 //            FileManager.default.createFile(atPath: fileURL.path, contents: nil)
@@ -134,6 +134,7 @@ class LKLogging: LKLoggingProtocol {
 //        }
     }
 }
+
 // @synchronized
 func with(lock: NSLock, f: () -> Void) {
     lock.lock()
@@ -142,7 +143,6 @@ func with(lock: NSLock, f: () -> Void) {
 }
 
 public class LKLog {
-    
     public static let shared = LKLog()
     /// 打印日志的等级,默认只打印高级别日志
     public var logLevel: LKLogLevel = [.error, .warning, .debug]
@@ -175,7 +175,7 @@ public class LKLog {
     
     public static func debug<T>(_ message: T, data: [String: Any] = [:], file: String = #file, function: String = #function, line: Int = #line) {
         let formatStr = formatLog(file: file, function: function, line: line)
-        var logMessage: String = "\(message)"
+        var logMessage = "\(message)"
         if !data.isEmpty {
             let data = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
             if let str = String(data: data, encoding: .utf8) {
@@ -202,7 +202,7 @@ public class LKLog {
     
     public static func error<T>(_ message: T, data: [String: Any] = [:], file: String = #file, function: String = #function, line: Int = #line) {
         let formatStr = formatLog(file: file, function: function, line: line)
-        var logMessage: String = "\(message)"
+        var logMessage = "\(message)"
         if !data.isEmpty {
             let data = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
             if let str = String(data: data, encoding: .utf8) {

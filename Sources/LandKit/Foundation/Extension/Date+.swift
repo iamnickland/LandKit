@@ -81,14 +81,14 @@ public extension Date {
     }
 }
 
-extension Date {
+public extension Date {
 
     static func - (lhs: Date, rhs: Date) -> TimeInterval {
         return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
     }
 }
 
-extension Date {
+public extension Date {
     /// Returns the amount of years from another date
     func years(from date: Date) -> Int {
         return Calendar.current.dateComponents([.year], from: date, to: self).year ?? 0
