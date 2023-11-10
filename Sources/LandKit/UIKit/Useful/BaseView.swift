@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct ScreenUtils {
+public enum ScreenUtils {
     static var width: CGFloat {
         return UIScreen.main.bounds.width
     }
@@ -30,7 +30,7 @@ public struct ScreenUtils {
 }
 
 /// UI组件协议
-public protocol UIComponentsProtocol {
+protocol UIComponentsProtocol {
     /// 添加
     func addUIComponents()
     /// 布局
@@ -39,9 +39,9 @@ public protocol UIComponentsProtocol {
     func updateUIComponents()
 }
 
-public typealias BaseView = LKBaseView & UIComponentsProtocol
+private typealias BaseView = LKBaseView & UIComponentsProtocol
 
-open class LKBaseView: UIView {
+private class LKBaseView: UIView {
     public let screenWidth: CGFloat = ScreenUtils.width
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,6 +54,7 @@ open class LKBaseView: UIView {
     }
 
     // MARK: 创建业务视图
+
     func setupBusViews() {
         guard let view = self as? BaseView else { return }
         view.addUIComponents()

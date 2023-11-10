@@ -7,12 +7,11 @@
 
 import UIKit
 
-public typealias BaseTableViewCell = LKBaseTableViewCell & UIComponentsProtocol
+typealias BaseTableViewCell = LKBaseTableViewCell & UIComponentsProtocol
 
-open class LKBaseTableViewCell: UITableViewCell {
-    
+class LKBaseTableViewCell: UITableViewCell {
     class var cellIdentifier: String {
-        return String.init(describing: self)
+        return String(describing: self)
     }
     
     public let screenWidth: CGFloat = ScreenUtils.width
@@ -31,7 +30,8 @@ open class LKBaseTableViewCell: UITableViewCell {
     }
 
     // MARK: Functions
-    open func setupUIComponents() {
+
+    func setupUIComponents() {
         guard let view = self as? BaseTableViewCell else {
             return
         }
