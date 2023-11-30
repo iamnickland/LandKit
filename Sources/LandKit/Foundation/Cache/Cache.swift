@@ -28,75 +28,65 @@ extension PropertyListEncoder: TopLevelEncoder {}
 extension PropertyListDecoder: TopLevelDecoder {}
 
 // MARK: - CodableCache
-public protocol CodableCache: Cache {
+
+public protocol CodableCache {
+    /// 缓存服务
+    var cacheService: Cache { get }
+    /// 序列化
     var encoder: TopLevelEncoder { get }
     var decoder: TopLevelDecoder { get }
     
-    func cache<T: Encodable>(_ key: String, data: T)
-    func retrieve<T: Decodable>(_ key: String) -> T?
+    /// 存储实体
+    /// - Parameters:
+    ///   - key: key
+    ///   - entry: 实体
+    func cacheEntry<T: Encodable>(_ key: String, entry: T)
+    
+    /// 读取实体
+    /// - Parameter key: key
+    /// - Returns: 实体
+    func findEntry<T: Decodable>(_ key: String) -> T?
+    
+    /// 删除实体
+    /// - Parameter key: key
+    func removeEntry(_ key: String)
+    
+    /// 清空所有实体
+    func clear()
 }
 
 public extension CodableCache {
-    
     var encoder: TopLevelEncoder { JSONEncoder() }
     var decoder: TopLevelDecoder { JSONDecoder() }
     
-    func cache<T:Encodable>(_ key: String, data: T) {
+    func cacheEntry<T: Encodable>(_ key: String, entry: T) {
         do {
-            let data = try encoder.encode(data)
-            cache(key, data: data)
+            let data = try encoder.encode(entry)
+            cacheService.cache(key, data: data)
         } catch {
             print("Cache coding error", error)
         }
     }
     
-    func retrieve<T:Decodable>(_ key: String) -> T? {
-        if let data = find(key) {
+    func findEntry<T: Decodable>(_ key: String) -> T? {
+        if let data = cacheService.find(key) {
             return try? decoder.decode(T.self, from: data)
         }
         return nil
     }
-    func clear(_ key: String) {
-        clear(key)
-    }
-}
-/*
-// MARK: - CKCodableCache
-public protocol CKCacheProtocol {
-    var cacheService: Cache { get }
-    func cacheJSON<T: HandyJSON>(_ key: String, data: T)
-    func retrieveJSON<T>(_ key: String) -> T?  where T: HandyJSON
-    func cleaJSON(_ key: String)
-}
 
-public extension CKCacheProtocol {
-    
-    func cacheJSON<T:HandyJSON>(_ key: String, data: T) {
-        guard let jsonString = data.toJSONString(),
-              let data = jsonString.data(using: String.Encoding.utf8)
-        else {
-            return
-        }
-        cacheService.cache(key, data: data)
-    }
-    
-    func retrieveJSON<T>(_ key: String) -> T?  where T: HandyJSON  {
-        if let data = cacheService.retrieve(key),
-           let jsonString = String.init(data: data, encoding: .utf8) {
-            return T.deserialize(from: jsonString)
-        }
-        return nil
-    }
-    
-    func cleaJSON(_ key: String) {
+    func removeEntry(_ key: String) {
         cacheService.clear(key)
     }
+
+    func clear() {
+        cacheService.clear()
+    }
 }
-*/
 
 // MARK: - PersistingCache
+
 public final class PersistingCache: Cache {
-    
     private let fileCache: Cache
     private let memoryCache: Cache
     
@@ -120,10 +110,12 @@ public final class PersistingCache: Cache {
             return nil
         }
     }
+
     public func clear(_ key: String) {
         memoryCache.clear(key)
         fileCache.clear(key)
     }
+
     public func clear() {
         memoryCache.clear()
         fileCache.clear()
@@ -131,16 +123,16 @@ public final class PersistingCache: Cache {
 }
 
 // MARK: - FileCache
+
 public final class FileCache: Cache {
-    
     private let manager: FileManager
     private let baseURL: URL
     
     public init(manager: FileManager = .default, container: String = "FileCache") {
         self.manager = manager
         let cacheDir = try! manager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        self.baseURL = cacheDir.appendingPathComponent(container, isDirectory: true)
-        try! manager.createDirectory(at: self.baseURL, withIntermediateDirectories: true)
+        baseURL = cacheDir.appendingPathComponent(container, isDirectory: true)
+        try! manager.createDirectory(at: baseURL, withIntermediateDirectories: true)
     }
     
     public func cache(_ key: String, data: Data) {
@@ -181,11 +173,11 @@ public final class FileCache: Cache {
 }
 
 // MARK: - MemoryCache
+
 public final class MemoryCache: Cache {
-    
     private var _cache: NSCache<NSString, NSData> = .init()
     
-    public init(){ }
+    public init() {}
     
     public func cache(_ key: String, data: Data) {
         _cache.setObject(data as NSData, forKey: key as NSString)
@@ -194,9 +186,11 @@ public final class MemoryCache: Cache {
     public func find(_ key: String) -> Data? {
         _cache.object(forKey: key as NSString) as Data?
     }
+
     public func clear(_ key: String) {
         _cache.removeObject(forKey: key as NSString)
     }
+
     public func clear() {
         _cache.removeAllObjects()
     }

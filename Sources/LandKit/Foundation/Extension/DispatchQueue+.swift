@@ -10,7 +10,7 @@ import Foundation
 public extension DispatchQueue {
     /// - Parameter closure: Closure to execute.
     func mainIfNeeded(_ closure: @escaping (() -> Void)) {
-        guard self === DispatchQueue.main && Thread.isMainThread else {
+        guard self === DispatchQueue.main, Thread.isMainThread else {
             DispatchQueue.main.async(execute: closure)
             return
         }
