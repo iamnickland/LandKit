@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     /// 状态栏高度
     static var statusBarHeight: CGFloat {
         let window = shared.windows.filter { $0.isKeyWindow }.first
@@ -35,13 +35,15 @@ extension UIApplication {
     }
 }
 
-extension UIApplication {
-    
+public extension UIApplication {
+    var keyWindowRootViewController: UIViewController? {
+        return UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
+    }
+
     /// 获取顶部有效视图控制器
     /// - Parameter base: 所在的基础视图控制器
     /// - Returns: 视图控制器
-    class func getTopViewController(base: UIViewController? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController) -> UIViewController? {
-
+    class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindowRootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return getTopViewController(base: nav.visibleViewController)
 

@@ -22,7 +22,6 @@ public extension NSAttributedString {
 
 /// 构建
 public extension NSAttributedString {
-    
     /// 通过字符串构建富文本
     /// - Parameters:
     ///   - string: 字符串
@@ -37,7 +36,7 @@ public extension NSAttributedString {
             attributes[.backgroundColor] = backgroundColr
         }
         if let paragraphStyle = style {
-            attributes[.paragraphStyle] = style
+            attributes[.paragraphStyle] = paragraphStyle
         }
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         return attributedString

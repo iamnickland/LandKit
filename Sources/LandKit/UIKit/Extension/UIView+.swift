@@ -8,7 +8,6 @@
 import UIKit
 
 @IBDesignable public extension UIView {
-    
     @IBInspectable var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set {
@@ -64,10 +63,8 @@ import UIKit
 
 // MARK: - 阴影
 
-extension UIView {
-    
+public extension UIView {
     func makeShadow(cornerRadius: CGFloat = 10, shadowColor: UIColor = UIColor(white: 0.0, alpha: 0.1), shadowOffset: CGSize = CGSize(width: 0.0, height: 6.0), shadowOpacity: Float = 0.3, shadowRadius: CGFloat = 5) {
-        
         layer.cornerRadius = cornerRadius
         layer.shadowColor = shadowColor.cgColor
         layer.shadowOffset = shadowOffset
@@ -96,7 +93,7 @@ extension UIView {
         layer.shadowOffset = offSet
         layer.shadowRadius = radius
         
-        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
@@ -105,7 +102,6 @@ extension UIView {
 // MARK: - 边框和圆角
 
 public extension UIView {
-    
     /// 创建圆角
     /// - Parameters:
     ///   - corners: 需要圆角的方向
@@ -125,28 +121,28 @@ public enum LKBorderCorner {
 
 /// 拐角半径大小
 public struct LKRectCornerRadius {
-    var topLeft: CGFloat
-    var topRight: CGFloat
-    var bottomLeft: CGFloat
-    var bottomRight: CGFloat
+    public var topLeft: CGFloat
+    public var topRight: CGFloat
+    public var bottomLeft: CGFloat
+    public var bottomRight: CGFloat
     
-    init(topLeft: CGFloat = 0, topRight: CGFloat = 0, bottomLeft: CGFloat = 0, bottomRight: CGFloat = 0) {
+    public init(topLeft: CGFloat = 0, topRight: CGFloat = 0, bottomLeft: CGFloat = 0, bottomRight: CGFloat = 0) {
         self.topLeft = topLeft
         self.topRight = topRight
         self.bottomLeft = bottomLeft
         self.bottomRight = bottomRight
     }
     
-    init(all cornerRadius: CGFloat) {
-        self.topLeft = cornerRadius
-        self.topRight = cornerRadius
-        self.bottomLeft = cornerRadius
-        self.bottomRight = cornerRadius
+    public init(all cornerRadius: CGFloat) {
+        topLeft = cornerRadius
+        topRight = cornerRadius
+        bottomLeft = cornerRadius
+        bottomRight = cornerRadius
     }
 }
 
+/// 边框及圆角
 public extension UIView {
-    
     /// 给视图增加边框
     /// - Parameters:
     ///   - corner: 边框方位
@@ -156,7 +152,7 @@ public extension UIView {
         let border = UIView()
         border.translatesAutoresizingMaskIntoConstraints = false
         border.backgroundColor = color
-        self.addSubview(border)
+        addSubview(border)
         
         let topConstraint = topAnchor.constraint(equalTo: border.topAnchor)
         let leftConstraint = leadingAnchor.constraint(equalTo: border.leadingAnchor)
@@ -182,7 +178,7 @@ public extension UIView {
     ///   - corners: 圆角大小
     ///   - frame: 位置大小
     func makeCorner(_ corners: LKRectCornerRadius, frame: CGRect? = nil) {
-        let rect: CGRect = frame ?? self.bounds
+        let rect: CGRect = frame ?? bounds
         // 绘制路径
         let path = CGMutablePath()
         let topLeftRadius = corners.topLeft

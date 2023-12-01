@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIWindow {
+public extension UIWindow {
     static var keyWindow: UIWindow? {
         var keyWindow: UIWindow?
         if #available(iOS 13, *) {
@@ -21,4 +21,3 @@ extension UIWindow {
         return keyWindow
     }
 }
-
