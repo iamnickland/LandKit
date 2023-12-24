@@ -200,3 +200,35 @@ public extension UIView {
         self.layer.mask = layer
     }
 }
+
+// MARK: - 给视图增加点击事件
+
+public extension UIView {
+    private static var blockKey = "UITapgestureBlockKey"
+    
+    /// 为View添加UITapGestureRecognizer事件
+    /// - Parameters:
+    ///   - handler: 点击回调
+    /// - Returns: UITapGestureRecognizer
+    @discardableResult
+    func addTap(handler: @escaping ((_ sender: UITapGestureRecognizer) -> Void)) -> UITapGestureRecognizer {
+        isUserInteractionEnabled = true
+        let target = _UITapgestureBlockTarget(handler: handler)
+       
+        objc_setAssociatedObject(self, &UIView.blockKey, target, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        let tap = UITapGestureRecognizer(target: target, action: #selector(_UITapgestureBlockTarget.invoke(_:)))
+        addGestureRecognizer(tap)
+        return tap
+    }
+    
+    private class _UITapgestureBlockTarget {
+        private var handler: (_ sender: UITapGestureRecognizer) -> Void
+        init(handler: @escaping (_ sender: UITapGestureRecognizer) -> Void) {
+            self.handler = handler
+        }
+
+        @objc func invoke(_ sender: UITapGestureRecognizer) {
+            handler(sender)
+        }
+    }
+}
