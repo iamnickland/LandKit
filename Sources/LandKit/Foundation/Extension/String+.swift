@@ -2,7 +2,7 @@
 //  String+.swift
 //  LandKit
 //
-//  Created by Nick Land on 2023/7/21.
+//  Created by LandKit on 2023/7/21.
 //
 
 import Foundation
@@ -15,17 +15,18 @@ public extension String {
     /// URL编码
     /// - Returns: String
     func urlEncode() -> String? {
-        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: KUrlCodingReservedCharacters).inverted)! as String
+        return addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: KUrlCodingReservedCharacters).inverted)! as String
     }
+
     /// URL解码
     /// - Returns: String
     func urlDecode() -> String? {
-        return self.removingPercentEncoding as String?
+        return removingPercentEncoding as String?
     }
     
     /// 转码
     var encodedURL: URL? {
-        guard let string = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
+        guard let string = addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
         return URL(string: string)
     }
 }
@@ -33,7 +34,6 @@ public extension String {
 // MARK: - 布局相关宽高计算
 
 public extension String {
-    
     func width(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
@@ -48,50 +48,57 @@ public extension String {
     
     func size(usingFont font: UIFont) -> CGSize {
         let fontAttributes = [NSAttributedString.Key.font: font]
-        return self.size(withAttributes: fontAttributes)
+        return size(withAttributes: fontAttributes)
     }
     
-    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
-        return ceil(boundingBox.height)
-    }
+    /*
+     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+         let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+         return ceil(boundingBox.height)
+     }
     
-    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+     func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+         let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
-        return ceil(boundingBox.width)
-    }
+         return ceil(boundingBox.width)
+     }
+      */
 }
+
 // MARK: - 空格去除
 
 public extension String {
     // 去掉首尾空格
     var removeHeadAndTailSpace: String {
         let whitespace = NSCharacterSet.whitespaces
-        return self.trimmingCharacters(in: whitespace)
+        return trimmingCharacters(in: whitespace)
     }
+
     // 去掉首尾空格 包括后面的换行 \n
     var removeHeadAndTailSpacePro: String {
         let whitespace = NSCharacterSet.whitespacesAndNewlines
-        return self.trimmingCharacters(in: whitespace)
+        return trimmingCharacters(in: whitespace)
     }
+
     // 去掉所有空格
     var removeAllSapce: String {
-        return self.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+        return replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
     }
+
     // 去掉所有换行
     var removeAllReturn: String {
-        return self.replacingOccurrences(of: "\n", with: " ", options: .literal, range: nil)
+        return replacingOccurrences(of: "\n", with: " ", options: .literal, range: nil)
     }
+
     // 去掉首尾空格 后 指定开头空格数
     func beginSpaceNum(num: Int) -> String {
         var beginSpace = ""
-        for _ in 0..<num {
+        for _ in 0 ..< num {
             beginSpace += " "
         }
-        return beginSpace + self.removeHeadAndTailSpacePro
+        return beginSpace + removeHeadAndTailSpacePro
     }
 }
 
@@ -100,44 +107,50 @@ public extension String {
 public extension String {
     /// 根据下标获取某个下标字符
     subscript(of index: Int) -> String {
-        if index < 0 || index >= self.count {
+        if index < 0 || index >= count {
             return ""
         }
-        for (i, item) in self.enumerated() {
+        for (i, item) in enumerated() {
             if index == i {
                 return "\(item)"
             }
         }
         return ""
     }
+
     /// 根据range获取字符串 a[1...3]
     subscript(r: ClosedRange<Int>) -> String {
         let start = index(startIndex, offsetBy: max(r.lowerBound, 0))
         let end = index(startIndex, offsetBy: min(r.upperBound, count - 1))
-        return String(self[start...end])
+        return String(self[start ... end])
     }
+
     /// 根据range获取字符串 a[0..<2]
     subscript(r: Range<Int>) -> String {
         let start = index(startIndex, offsetBy: max(r.lowerBound, 0))
         let end = index(startIndex, offsetBy: min(r.upperBound, count))
-        return String(self[start..<end])
+        return String(self[start ..< end])
     }
+
     /// 根据range获取字符串 a[...2]
     subscript(r: PartialRangeThrough<Int>) -> String {
         let end = index(startIndex, offsetBy: min(r.upperBound, count - 1))
-        return String(self[startIndex...end])
+        return String(self[startIndex ... end])
     }
+
     /// 根据range获取字符串 a[0...]
     subscript(r: PartialRangeFrom<Int>) -> String {
         let start = index(startIndex, offsetBy: max(r.lowerBound, 0))
         let end = index(startIndex, offsetBy: count - 1)
-        return String(self[start...end])
+        return String(self[start ... end])
     }
+
     /// 根据range获取字符串 a[..<3]
     subscript(r: PartialRangeUpTo<Int>) -> String {
         let end = index(startIndex, offsetBy: min(r.upperBound, count))
-        return String(self[startIndex..<end])
+        return String(self[startIndex ..< end])
     }
+
     /// 截取字符串: index 开始到结尾
     /// - Parameter index: 开始截取的index
     /// - Returns: string
@@ -146,7 +159,7 @@ public extension String {
             return ""
         }
         let start = self.index(endIndex, offsetBy: index - count)
-        return String(self[start..<endIndex])
+        return String(self[start ..< endIndex])
     }
     
     /// 截取字符串
@@ -157,7 +170,7 @@ public extension String {
     func substring(start: Int, _ count: Int) -> String {
         let begin = index(startIndex, offsetBy: max(0, start))
         let end = index(startIndex, offsetBy: min(count, start + count))
-        return String(self[begin..<end])
+        return String(self[begin ..< end])
     }
 }
 
@@ -165,24 +178,26 @@ public extension String {
 
 public extension String {
     /// 是否包含字符
-    func isContainLetters() -> Bool{
+    func isContainLetters() -> Bool {
         let lettersCharacters = CharacterSet.letters
         let lettersRange = rangeOfCharacter(from: lettersCharacters)
         return lettersRange != nil
     }
+
     /// 是否包含数字
-    func isContainNumbers() -> Bool{
+    func isContainNumbers() -> Bool {
         let decimalCharacters = CharacterSet.decimalDigits
         let decimalRange = rangeOfCharacter(from: decimalCharacters)
         return decimalRange != nil
     }
+
     /// 是否包含特殊字符
     func isContainSpecial() -> Bool {
         let regex = try! NSRegularExpression(pattern: ".*[^A-Za-z0-9_].*", options: NSRegularExpression.Options())
-        var isSpecial :Bool = false
-        if regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(), range:NSMakeRange(0, self.count)) != nil {
+        var isSpecial = false
+        if regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, count)) != nil {
             isSpecial = true
-        }else{
+        } else {
             isSpecial = false
         }
         
@@ -197,14 +212,13 @@ public extension String {
     /// - Returns: 替换处理后的字符
     func pregReplace(pattern: String, with: String, options: NSRegularExpression.Options = []) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: options)
-        return regex.stringByReplacingMatches(in: self, options: [], range: NSMakeRange(0, self.count), withTemplate: with)
+        return regex.stringByReplacingMatches(in: self, options: [], range: NSMakeRange(0, count), withTemplate: with)
     }
 }
 
 // MARK: - 富文本转换
 
 public extension String {
-    
     /// 查找当前字符串中所制定的字符,并设定指定的颜色
     /// - Parameters:
     ///   - strings: 需要特殊修改的字符组
@@ -223,7 +237,7 @@ public extension String {
                 attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: range)
             }
         }
-        guard let characterSpacing = characterSpacing else {return attributedString}
+        guard let characterSpacing = characterSpacing else { return attributedString }
         attributedString.addAttribute(NSAttributedString.Key.kern, value: characterSpacing, range: NSRange(location: 0, length: attributedString.length))
         return attributedString
     }
@@ -236,7 +250,6 @@ public extension String {
     ///   - style: 样式
     /// - Returns: 转换处理后的富文本字符串
     func attributedString(font: UIFont, foregroundColor: UIColor, backgroundColr: UIColor? = nil, style: NSParagraphStyle? = nil) -> NSAttributedString {
-        
         var attributes: [NSAttributedString.Key: Any] = [
             .font: font,
             .foregroundColor: foregroundColor,
@@ -250,5 +263,4 @@ public extension String {
         let attributedString = NSAttributedString(string: self, attributes: attributes)
         return attributedString
     }
-    
 }

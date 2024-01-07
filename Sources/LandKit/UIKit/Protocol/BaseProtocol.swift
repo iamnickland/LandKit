@@ -2,7 +2,7 @@
 //  BaseProtocol.swift
 //  LandKit
 //
-//  Created by Nick Land on 2023/9/9.
+//  Created by LandKit on 2023/9/9.
 //
 
 import Foundation

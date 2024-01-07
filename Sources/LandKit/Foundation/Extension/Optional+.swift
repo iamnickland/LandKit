@@ -2,7 +2,7 @@
 //  Optional+.swift
 //  LandKit
 //
-//  Created by Nick Land on 2023/7/21.
+//  Created by LandKit on 2023/7/21.
 //
 
 import Foundation

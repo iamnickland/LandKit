@@ -2,7 +2,7 @@
 //  DateFormatter+.swift
 //  LandKit
 //
-//  Created by Nick Land on 2023/12/24.
+//  Created by LandKit on 2023/12/24.
 //
 
 import Foundation

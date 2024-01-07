@@ -2,7 +2,7 @@
 //  Array+.swift
 //  LandKit
 //
-//  Created by Nick Land on 2023/12/23.
+//  Created by LandKit on 2023/12/23.
 //
 
 /*
