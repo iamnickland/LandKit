@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - ScreenUtils
+
 public enum ScreenUtils {
     static var width: CGFloat {
         return UIScreen.main.bounds.width
@@ -29,17 +31,9 @@ public enum ScreenUtils {
     }
 }
 
-/// UI组件协议
-protocol UIComponentsProtocol {
-    /// 添加
-    func addUIComponents()
-    /// 布局
-    func layoutUIComponents()
-    /// 更新
-    func updateUIComponents()
-}
-
 private typealias BaseView = LKBaseView & UIComponentsProtocol
+
+// MARK: - LKBaseView
 
 private class LKBaseView: UIView {
     public let screenWidth: CGFloat = ScreenUtils.width
@@ -50,7 +44,7 @@ private class LKBaseView: UIView {
 
     @available(*, unavailable)
     public required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        nil
     }
 
     // MARK: 创建业务视图

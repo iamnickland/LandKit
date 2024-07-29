@@ -14,7 +14,6 @@ public extension NSAttributedString {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT)))
         label.numberOfLines = 0
         label.attributedText = self
-        
         label.sizeToFit()
         return label.frame.height
     }
@@ -24,7 +23,6 @@ public extension NSAttributedString {
         let height = boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)),
                                   options: [.usesLineFragmentOrigin],
                                   context: nil).size.height
-        
         return ceil(height)
     }
     
@@ -33,12 +31,11 @@ public extension NSAttributedString {
         let width = boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height),
                                  options: [.usesLineFragmentOrigin],
                                  context: nil).size.width
-        
         return ceil(width)
     }
 
     func calcHeight(for width: CGFloat) -> CGFloat {
-        guard string.count > 0 else { return 0 }
+        guard !string.isEmpty else { return 0 }
         let maxHeight: CGFloat = 10000
         let path = CGPath(rect: .init(x: 0, y: 0, width: width, height: maxHeight), transform: nil)
         let frame: CTFrame = ctFrame(for: path)

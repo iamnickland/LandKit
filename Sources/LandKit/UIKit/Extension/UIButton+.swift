@@ -1,11 +1,14 @@
 //
-//  UIButton+.swift
+//  File.swift
 //  LandKit
 //
-//  Created by LandKit on 2024/1/7.
+//  Created by Anakin on 2024/7/29.
 //
 
+import Foundation
 import UIKit
+
+// MARK: - ButtonImagePosition
 
 /// 按钮 图片位置
 public enum ButtonImagePosition: Int {
@@ -15,12 +18,12 @@ public enum ButtonImagePosition: Int {
     case imageRight
 }
 
-extension UIButton {
+public extension UIButton {
     /// 设置图片类型和位置
     /// - Parameters:
     ///   - type: 图片位置类型
     ///   - space: 图片和文字的距离
-    public func setImagePosition(type: ButtonImagePosition, Space space: CGFloat = 0) {
+    func setImagePosition(type: ButtonImagePosition, Space space: CGFloat = 0) {
         let imageWith: CGFloat = (imageView?.frame.size.width)!
         let imageHeight: CGFloat = (imageView?.frame.size.height)!
       
@@ -51,3 +54,37 @@ extension UIButton {
         self.imageEdgeInsets = imageEdgeInsets
     }
 }
+
+// MARK: - quick 快速构建
+
+public extension UIButton {
+    convenience init(text: String?, titleColor: UIColor?, fontSize: CGFloat, _ state: UIControl.State = []) {
+        self.init(frame: CGRect.zero)
+        setBackgroundColor(.lightGray, for: .disabled)
+        setTitle(text, for: state)
+        setTitleColor(titleColor, for: state)
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+    }
+
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State = .normal) {
+        setBackgroundImage(color.toImage(size: CGSize(width: 1.0, height: 1.0)), for: state)
+    }
+
+    func setTitle(_ title: String, titleColor: UIColor? = nil, font: UIFont? = nil, for state: UIControl.State = .normal) {
+        let attributeString = NSMutableAttributedString(string: title)
+
+        if let font = font {
+            attributeString.addAttribute(.font, value: font, range: .init(location: 0, length: attributeString.length))
+        }
+
+        if let titleColor = titleColor {
+            attributeString.addAttribute(.foregroundColor,
+                                         value: titleColor,
+                                         range: .init(location: 0, length: attributeString.length))
+        }
+   
+        setAttributedTitle(attributeString,
+                           for: state)
+    }
+}
+ 

@@ -103,6 +103,8 @@ public extension UIView {
 
 public extension UIView {
     /// 创建圆角
+    /// `let corner: UIRectCorner = .bottomLeft.union(.bottomRight)`
+    /// `view.roundCorners(corner, radius: 20)`
     /// - Parameters:
     ///   - corners: 需要圆角的方向
     ///   - radius: 圆角半径
@@ -114,10 +116,14 @@ public extension UIView {
     }
 }
 
+// MARK: - LKBorderCorner
+
 /// 边框拐角方位
 public enum LKBorderCorner {
     case top, bottom, left, right
 }
+
+// MARK: - LKRectCornerRadius
 
 /// 拐角半径大小
 public struct LKRectCornerRadius {

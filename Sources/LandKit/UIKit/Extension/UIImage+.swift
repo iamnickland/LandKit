@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - LKImageGradientDirection
+
 public enum LKImageGradientDirection {
     case toLeft
     case toRight
@@ -22,11 +24,8 @@ public enum LKImageGradientDirection {
 public extension UIImage {
     convenience init?(size: CGSize, direction: LKImageGradientDirection, colors: [UIColor]) {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-        
         guard let context = UIGraphicsGetCurrentContext() else { return nil } // If the size is zero, the context will be nil.
-        
         guard colors.count >= 1 else { return nil } // If less than 1 color, return nil
-        
         if colors.count == 1 {
             // Mono color
             let color = colors.first!
@@ -110,31 +109,16 @@ public extension UIImage {
     /// 通过颜色生成图片
     static func createImage(color: UIColor, size: CGSize) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        UIGraphicsBeginImageContext(rect.size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
         let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(color.cgColor)
         context!.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        
         return image!
-    }
-    
-    /// 讲图片裁剪为圆角
-    func roundedCorners(radius: CGFloat? = 0.0) -> UIImage? {
-        var cornerRadius: CGFloat = 0.0
-        if let radius = radius {
-            if radius > 0 {
-                let maxRadius = min(size.width, size.height) / 2
-                cornerRadius = max(radius, maxRadius)
-            }
-        }
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        let rect = CGRect(origin: .zero, size: size)
-        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-        draw(in: rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
     }
     
     /// 通过颜色,尺寸,圆角创建图片
@@ -142,6 +126,25 @@ public extension UIImage {
         let image = createImage(color: color, size: size)
         let newImage = image.roundedCorners(radius: cornerRadius)
         return newImage ?? image
+    }
+
+    /// 将图片裁剪为圆角
+    func roundedCorners(radius: CGFloat? = 0.0) -> UIImage {
+        var cornerRadius: CGFloat = 0.0
+        if let radius = radius, radius > 0 {
+            let maxRadius = min(size.width, size.height) / 2
+            cornerRadius = min(radius, maxRadius)
+        }
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        let rect = CGRect(origin: .zero, size: size)
+        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+        draw(in: rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+   
+        return image ?? self
     }
 }
 
@@ -157,8 +160,6 @@ public extension UIImage {
         return image(color: color, size: size, corners: .allCorners, radius: 0)
     }
 
-    // MARK: 2.2、生成指定尺寸和圆角的纯色图像
-
     /// 生成指定尺寸和圆角的纯色图像
     /// - Parameters:
     ///   - color: 图片颜色
@@ -169,8 +170,11 @@ public extension UIImage {
     static func image(color: UIColor, size: CGSize, corners: UIRectCorner, radius: CGFloat) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
         let context = UIGraphicsGetCurrentContext()
-        if radius > 0 {
+        if radius > 0.0 {
             let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
             color.setFill()
             path.fill()
@@ -179,7 +183,7 @@ public extension UIImage {
             context?.fill(rect)
         }
         let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        
         return img
     }
 
@@ -225,13 +229,8 @@ public extension UIImage {
     ///   - locations: locations 数组
     ///   - direction: 渐变的方向
     /// - Returns: 带圆角的渐变的图片
-    static func gradient(_ colors: [UIColor],
-                         size: CGSize = CGSize(width: 10, height: 10),
-                         radius: CGFloat,
-                         locations: [CGFloat]? = nil,
-                         direction: GradientDirection = .horizontal) -> UIImage?
-    {
-        if colors.count == 0 { return nil }
+    static func gradient(_ colors: [UIColor], size: CGSize = CGSize(width: 10, height: 10), radius: CGFloat, locations: [CGFloat]? = nil, direction: GradientDirection = .horizontal) -> UIImage? {
+        if colors.isEmpty { return nil }
         if colors.count == 1 {
             return UIImage.image(color: colors[0], size: size)
         }
@@ -239,28 +238,23 @@ public extension UIImage {
         return gradient(colors, size: size, radius: radius, locations: locations, startPoint: directionPoint.0, endPoint: directionPoint.1)
     }
     
-    static func gradient(_ colors: [UIColor],
-                         size: CGSize = CGSize(width: 10, height: 10),
-                         radius: CGFloat,
-                         locations: [CGFloat]? = nil,
-                         startPoint: CGPoint = CGPoint(x: 0, y: 0),
-                         endPoint: CGPoint = CGPoint(x: 1, y: 1)) -> UIImage?
-    {
-        if colors.count == 0 { return nil }
+    static func gradient(_ colors: [UIColor], size: CGSize = CGSize(width: 10, height: 10), radius: CGFloat, locations: [CGFloat]? = nil, startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 1)) -> UIImage? {
+        if colors.isEmpty { return nil }
         if colors.count == 1 {
             return UIImage.image(color: colors[0], size: size)
         }
         UIGraphicsBeginImageContext(size)
+        defer {
+            UIGraphicsEndImageContext()
+        }
         let context = UIGraphicsGetCurrentContext()
         let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: size.width, height: size.height), cornerRadius: radius)
         path.addClip()
         context?.addPath(path.cgPath)
-        guard let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors.map { $0.cgColor } as CFArray, locations: locations?.map { CGFloat($0) }) else { return nil
-        }
+        guard let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors.map { $0.cgColor } as CFArray, locations: locations?.map { CGFloat($0) }) else { return nil }
         context?.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: .drawsBeforeStartLocation)
     
         let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
         return image
     }
 }

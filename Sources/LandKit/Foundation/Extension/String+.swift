@@ -264,3 +264,53 @@ public extension String {
         return attributedString
     }
 }
+
+// MARK: -  数据转换
+
+public extension String {
+    /// 截取字符串
+    subscript(loc: Int) -> String {
+        let startIndex = index(self.startIndex, offsetBy: loc)
+        return String(self[startIndex ..< endIndex])
+    }
+    
+    /// 截取字符串
+    subscript(loc: Int, lenth: Int) -> String {
+        let startIndex = index(self.startIndex, offsetBy: loc)
+        let endIndex = index(self.startIndex, offsetBy: loc + lenth)
+        return String(self[startIndex ..< endIndex])
+    }
+    
+    func trim() -> String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    func toCGFloat() -> CGFloat {
+        var cgFloat: CGFloat = 0
+        if let doubleValue = Double(self) {
+            cgFloat = CGFloat(doubleValue)
+        }
+        return cgFloat
+    }
+    
+    func toFloat() -> Float {
+        var float: Float = 0
+        if let doubleValue = Double(self) {
+            float = Float(doubleValue)
+        }
+        return float
+    }
+    
+    func toInt() -> Int {
+        var int = 0
+        if let intValue = Int(self) {
+            int = intValue
+        }
+        return int
+    }
+    
+    func toDic() -> [String: Any]? {
+        guard let data = data(using: String.Encoding.utf8) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: [JSONSerialization.ReadingOptions(rawValue: 0)]) as? [String: AnyObject]
+    }
+}

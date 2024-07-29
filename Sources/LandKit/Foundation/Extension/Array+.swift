@@ -53,7 +53,7 @@ public extension Array {
     
     /// 过滤去重
     /// - Parameter filter: 条件
-    /// - Returns: 去重构的数组
+    /// - Returns: 去重后的数组
     func filterDuplicates<E: Equatable>(_ filter: (Element) -> E) -> [Element] {
         var result = [Element]()
         for value in self {

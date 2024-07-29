@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LandKit"
-  s.version      = "1.0.20"
+  s.version      = "1.0.21"
   s.summary      = "The package of useful tools, include categories and classes"
   s.description  = <<-DESC
                   The package of useful tools, include categories and classes

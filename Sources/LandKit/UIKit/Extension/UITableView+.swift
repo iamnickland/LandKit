@@ -8,8 +8,8 @@
 import UIKit
 
 public extension UITableView {
-    
     // MARK: - UITableViewCell
+
     func registerCell<T: UITableViewCell>(_: T.Type, reuseIdentifier: String = T.reuseIdentifier) {
         register(T.self, forCellReuseIdentifier: reuseIdentifier)
     }
@@ -19,6 +19,7 @@ public extension UITableView {
     }
     
     // MARK: - UITableViewCell Nib
+
     func registerCell<T: UITableViewCell & NibBased>(_: T.Type, nibName: String? = nil, reuseIdentifier: String = T.reuseIdentifier) {
         let nib = nibName.let { UINib(nibName: $0, bundle: nil) } ?? T.nib
         register(nib, forCellReuseIdentifier: reuseIdentifier)
@@ -29,6 +30,7 @@ public extension UITableView {
     }
     
     // MARK: UITableViewHeaderFooterView
+
     func registerHeaderFooter<T: UITableViewHeaderFooterView>(_: T.Type, reuseIdentifier: String = T.reuseIdentifier) {
         register(T.self, forHeaderFooterViewReuseIdentifier: reuseIdentifier)
     }
@@ -45,8 +47,7 @@ public extension UITableViewCell {
 }
 
 public extension UITableViewHeaderFooterView {
-   static var reuseIdentifier: String {
-       String(describing: self)
-   }
-
+    static var reuseIdentifier: String {
+        String(describing: self)
+    }
 }
