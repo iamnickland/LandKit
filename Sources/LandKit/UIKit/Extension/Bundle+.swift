@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension Bundle {
+public extension Bundle {
     /// 指定路径获取Bundle, 使用 eg:
     /// ```
     /// private class Example {}
@@ -18,7 +18,7 @@ extension Bundle {
     ///   - aClass: 类
     ///   - resource: 资源包名称
     /// - Returns: Bundle
-    public class func bundle(for aClass: AnyClass, resource: String) -> Bundle {
+    class func bundle(for aClass: AnyClass, resource: String) -> Bundle {
         let bundle = Bundle(for: aClass)
         guard
             let path = bundle.path(forResource: resource, ofType: "bundle"),
@@ -30,13 +30,13 @@ extension Bundle {
     }
 }
 
-extension UIImage {
+public extension UIImage {
     /// 根据Bundle读取图片资源
     /// - Parameters:
     ///   - named: 图片名称
     ///   - bundle: budle资源包
     /// - Returns: 图片
-    public class func image(with named: String, in bundle: Bundle?) -> UIImage? {
+    class func image(with named: String, in bundle: Bundle?) -> UIImage? {
         guard !named.isEmpty else { return nil }
         return UIImage(named: named, in: bundle, with: nil)
     }

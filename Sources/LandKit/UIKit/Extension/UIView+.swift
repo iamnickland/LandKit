@@ -7,6 +7,22 @@
 
 import UIKit
 
+// MARK: - LKNibLoadable
+
+public protocol LKNibLoadable {}
+
+// MARK: - 继承于UIView的才可以使用该协议的扩展
+
+public extension LKNibLoadable where Self: UIView {
+    /// 加载xib视图
+    /// - Parameter nibName: xib名字
+    /// - Returns: 返回视图
+    static func loadFromNib(_ nibName: String? = nil) -> Self {
+        let loadNme = nibName == nil ? "\(self)" : nibName!
+        return Bundle.main.loadNibNamed(loadNme, owner: nil, options: nil)?.first as! Self
+    }
+}
+
 @IBDesignable public extension UIView {
     @IBInspectable var cornerRadius: CGFloat {
         get { return layer.cornerRadius }

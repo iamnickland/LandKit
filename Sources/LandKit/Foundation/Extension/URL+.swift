@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public extension URL {
     /// 对URL进行拼接query
@@ -29,5 +30,23 @@ public extension URL {
         }
 
         return updatedURL
+    }
+    
+    /// 提取链接中的参数以字典形式显示
+    var queryParameters: [String: String]? {
+        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
+            return nil
+        }
+        var parameters = [String: String]()
+        for item in queryItems {
+            parameters[item.name] = item.value
+        }
+        return parameters
+    }
+    
+    /// 检测应用是否能打开这个URL实例
+    /// - Returns: 结果
+    func verifyURL() -> Bool {
+        return UIApplication.shared.canOpenURL(self)
     }
 }

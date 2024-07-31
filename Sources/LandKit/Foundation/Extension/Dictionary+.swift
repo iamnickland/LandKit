@@ -38,4 +38,12 @@ public extension Dictionary {
             merge(other) { current, _ in current }
         }
     }
+    
+    /// 字典转换为JSONString
+    func toJSONString() -> String? {
+        if let jsonData = try? JSONSerialization.data(withJSONObject: self, options: JSONSerialization.WritingOptions()), let jsonStr = String(data: jsonData, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue)) {
+            return String(jsonStr)
+        }
+        return nil
+    }
 }

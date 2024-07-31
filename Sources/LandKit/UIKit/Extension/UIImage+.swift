@@ -125,7 +125,7 @@ public extension UIImage {
     static func createImage(color: UIColor, size: CGSize, cornerRadius: CGFloat = 0) -> UIImage {
         let image = createImage(color: color, size: size)
         let newImage = image.roundedCorners(radius: cornerRadius)
-        return newImage ?? image
+        return newImage
     }
 
     /// 将图片裁剪为圆角
