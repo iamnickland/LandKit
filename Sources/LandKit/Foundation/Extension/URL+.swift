@@ -12,9 +12,9 @@ public extension URL {
     /// 对URL进行拼接query
     /// - Parameter items: 带拼接的query items
     /// - Returns: 拼接后的完整的URL
-    func appendQuery(items items: [URLQueryItem]) -> URL {
+    func appendQuery(items queryItems: [URLQueryItem]) -> URL {
         // 创建URLComponents实例，可能会返回nil因此使用guard进行可选绑定
-        guard var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false), !items.isEmpty else {
+        guard var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false), !queryItems.isEmpty else {
             // Failed to create URL components from original URL
             return self
         }
@@ -22,7 +22,7 @@ public extension URL {
             urlComponents.queryItems = []
         }
         // 将新的查询项添加到现有查询项（如果有）
-        urlComponents.queryItems?.append(contentsOf: items)
+        urlComponents.queryItems?.append(contentsOf: queryItems)
         // 构建新的带参数的URL
         guard let updatedURL = urlComponents.url else {
             // Failed to create updated URL from components

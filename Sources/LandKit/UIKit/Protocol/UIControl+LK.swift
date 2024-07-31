@@ -7,6 +7,13 @@
 
 import Foundation
 
+/// UIControl闭包
+public typealias ControlClosure = (UIControl) -> Void
+
+// MARK: - UIView + LKPOPCompatible
+
+extension UIView: LKPOPCompatible {}
+
 // MARK: - AssociateKeys
 
 private struct AssociateKeys {
@@ -14,8 +21,10 @@ private struct AssociateKeys {
     static var closure = UnsafeRawPointer("UIControlclosure".withCString { $0 })
 }
 
+// MARK: - 防止按钮重复点击
+
 public extension LKPOP where Base: UIControl {
-    // MARK: 2.1、多少秒内不可重复点击
+    // MARK: 多少秒内不可重复点击
 
     // 多少秒内不可重复点击
     func preventDoubleHit(_ hitTime: Double = 1) {
@@ -56,9 +65,10 @@ private extension UIControl {
     }
 }
 
-// MARK: -  Button
+// MARK: - UIButton + LKPOPCompatible
 
 private var LKUIButtonExpandSizeKey = UnsafeRawPointer("LKUIButtonExpandSizeKey".withCString { $0 })
+// 扩大按钮点击区域
 public extension UIButton {
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         if lk.touchExtendInset == .zero || isHidden || !isEnabled {

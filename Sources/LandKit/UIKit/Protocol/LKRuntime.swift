@@ -53,7 +53,7 @@ public class LKRuntime: NSObject {
         for i in 0 ..< intCount {
             let property: objc_property_t = properties![i]
             guard let propertyName = NSString(utf8String: property_getName(property)) as String? else {
-                LKPrint("Couldn't unwrap property name for \(property)")
+                debugPrint("Couldn't unwrap property name for \(property)")
                 break
             }
             propertyNames.append(propertyName)
