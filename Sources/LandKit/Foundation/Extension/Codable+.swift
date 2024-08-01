@@ -1,6 +1,6 @@
 //
 //  LKJSON.swift
-//
+//  LandKit
 //
 //  Created by Anakin on 2024/7/31.
 //
@@ -24,5 +24,12 @@ public extension LKJSON {
             return String(data: encodedData, encoding: .utf8)
         }
         return nil
+    }
+}
+
+public extension Encodable {
+    /// 编码
+    var encoded: Data? {
+        try? JSONEncoder().encode(self)
     }
 }
