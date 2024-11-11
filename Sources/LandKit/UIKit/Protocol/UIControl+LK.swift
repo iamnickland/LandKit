@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// UIControl闭包
 public typealias ControlClosure = (UIControl) -> Void
