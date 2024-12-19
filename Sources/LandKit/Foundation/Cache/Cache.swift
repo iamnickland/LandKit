@@ -64,7 +64,7 @@ public extension CodableCache {
             let data = try encoder.encode(entry)
             cacheService.cache(key, data: data)
         } catch {
-            print("Cache coding error", error)
+//            print("Cache coding error", error)
         }
     }
     
@@ -149,7 +149,6 @@ public final class FileCache: Cache {
             let file = URL(fileURLWithPath: "\(key).cache", relativeTo: baseURL)
             return try Data(contentsOf: file)
         } catch {
-            print("cache error", error)
             return nil
         }
     }
